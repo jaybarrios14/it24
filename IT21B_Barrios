@@ -47,7 +47,6 @@ class ToDoList {
     }
 }
 
-// Example usage
 const toDoList = new ToDoList();
 toDoList.addTask("Buy milk");
 toDoList.addTask("Walk the dog");
