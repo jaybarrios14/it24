@@ -36,6 +36,7 @@ myMap.addMarker(8.304968, 125.028894, 'Communal Ranch');
 myMap.addMarker(8.367946,124.866118, 'Manolo Fortich Centennial Plaza');
 myMap.addMarker(8.440103,124.877703, 'Ogaong View Deck');
 myMap.addMarker(8.349020,124.712095, 'Cowboy's Camp');
+myMap.addMarker(8.330370,124.814306, 'DELMONTE Pineapple Icon');
 */
 
 myMap.loadMarkersFromJson('applet-2.json');
