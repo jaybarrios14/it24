@@ -8,21 +8,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #09ee7b;
             font-family: Arial, sans-serif;
         }
         .container {
             margin-top: 5rem;
-            background-color: #ffffff;
+            background-color: #1808fc;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(243, 4, 4, 0.1);
         }
         h4 {
-            color: #007bff; /* Bootstrap primary color */
+            color: #ff5100; 
         }
         input {
-            border-radius: 5px;
+            border-radius: 10px;
         }
         button {
             margin-top: 10px;
@@ -45,8 +45,8 @@
 
 <script>
 function showSum() {
-    var num1 = parseInt(document.getElementById('num1').value) || 0; // Default to 0 if NaN
-    var num2 = parseInt(document.getElementById('num2').value) || 0; // Default to 0 if NaN
+    var num1 = parseInt(document.getElementById('num1').value) || 0; 
+    var num2 = parseInt(document.getElementById('num2').value) || 0; 
     var sum = num1 + num2;
     alert("The sum is: " + sum);
 }
