@@ -7,27 +7,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>IT24 Resources</title>
     <style>
-        .applet-flex-container{
-            display:flex;
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .applet-flex-container {
+            display: flex;
             justify-content: center;
-            margin-top: 1rem;
-            width: 100%;
-            color: rgb(255, 0, 128);
+            flex-wrap: wrap;
+            margin-top: 2rem;
         }
-
-        .applet-flex-container > div{
-            margin-left: .2rem;
+        .card {
+            margin: 1rem;
+            transition: transform 0.2s;
         }
-
-        .title{
-            margin-top: 7rem;
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .title {
+            margin-top: 4rem;
             text-align: center;
-            color: rgb(255, 0, 128);
+            color: #ff0080;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .navbar {
+            margin-bottom: 2rem;
         }
     </style>
 </head>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,29 +68,26 @@
     </div>
 </nav>
 
-<body>
-
-    <h1 class="title">Event Driven Programming Applet</h1>
-    <div class="applet-flex-container">
-        <!--Applet 1 Card-->
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Applet 1 - Basic Events </h5>
-              <p class="card-text">This application contains the basic implementation of DOM events</p>
-              <a href="applet-1.html" class="btn btn-primary">Go to Applet</a>
-            </div>
+<h1 class="title">Event Driven Programming Applet</h1>
+<div class="applet-flex-container">
+    <!-- Applet 1 Card -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Applet 1 - Basic Events</h5>
+            <p class="card-text">This application contains the basic implementation of DOM events.</p>
+            <a href="applet-1.html" class="btn btn-primary">Go to Applet</a>
         </div>
-
-         <!--Applet 2 Card-->
-         <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Applet 2 - Leaflet Map</h5>
-            <p class="card-text">This application contains the basic web map</p>
-            <a href="./applet-2.html" class="btn btn-primary">Go to Applet</a>
-          </div>
-        </div>
-
-        
     </div>
+
+    <!-- Applet 2 Card -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Applet 2 - Leaflet Map</h5>
+            <p class="card-text">This application contains a basic web map.</p>
+            <a href="applet-2.html" class="btn btn-primary">Go to Applet</a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

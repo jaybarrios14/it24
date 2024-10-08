@@ -9,22 +9,34 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <title>Applet 2 - Leaflet Map</title>
     <style>
-        .applet-container{
-            margin-top: 1rem;
-            margin-left: 2rem;
-            width: 90%;
-            color: rgb(9, 255, 0);
+        body {
+            background-color: #f8f9fa;
         }
-
+        .applet-container {
+            margin: 3rem auto;
+            padding: 20px;
+            border: 2px solid #343a40;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+        }
+        h3 {
+            color: #007bff; /* Bootstrap primary color */
+            text-align: center;
+        }
         #map {
             height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-        
     </style>
-    
 </head>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +54,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -53,16 +65,13 @@
     </div>
 </nav>
 
-<body>
-    <div class="applet-container">
-        <h3>Leaflet Map Basics</h3>
-        <div id="map"></div>
-      
-    </div>
-   
+<div class="applet-container">
+    <h3>Leaflet Map Basics</h3>
+    <div id="map"></div>
+</div>
+
 <script>
 class LeafletMap {
-
     constructor(containerId, center, zoom) {
         this.map = L.map(containerId).setView(center, zoom);
         this.initTileLayer();
@@ -93,17 +102,8 @@ class LeafletMap {
 }
 
 const myMap = new LeafletMap('map', [8.360004, 124.868419], 18);
-
-/*
-myMap.addMarker(8.359735, 124.869206, 'CCS Faculty Office');
-myMap.addMarker(8.359639,124.869179, 'CCS Laboratory 1');
-myMap.addMarker(8.359554,124.869153, 'CCS Laboratory 2');
-myMap.addMarker(8.382603,124.849342, 'MY HOME PALCE');
-*/
-
 myMap.loadMarkersFromJson('applet-2.json');
-
 </script>
-</body>
 
+</body>
 </html>

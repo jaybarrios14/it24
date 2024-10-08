@@ -7,21 +7,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Applet 1 - Basic Events</title>
     <style>
-        .applet-container{
-            margin-top: 5rem;
-            margin-left: 1rem;
-            color: rgb(255, 0, 0);
-            max-width: 500px;
-            margin: 5 auto;
+        body {
+            background-color: #f8f9fa;
+        }
+        .applet-container {
+            margin: 5rem auto;
             padding: 30px;
-            border: 3px solid #0c0c0c;
+            border: 3px solid #343a40;
             border-radius: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: #dc3545; /* Bootstrap danger color */
+        }
+        h3 {
+            color: #495057; /* Darker color for headings */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Bootstrap primary color */
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            border-color: #0056b3;
         }
     </style>
-    
 </head>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,11 +52,10 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="applet-1.html">Applet 1</a></li>
-             
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -50,33 +66,28 @@
     </div>
 </nav>
 
-<body>
-  <center> <div class="applet-container">
-        <h3>Type input event</h3>
-        <h1 id="displayText">Your text will appear here</h1>
-        <input type="text" id="textbox" placeholder="Type something here..." oninput="updateDisplay()">
-        <br>
-        <br>
+<div class="applet-container text-center">
+    <h3>Type Input Event</h3>
+    <h1 id="displayText">Your text will appear here</h1>
+    <input type="text" id="textbox" class="form-control mb-3" placeholder="Type something here..." oninput="updateDisplay()">
     
-        <h3>Click Button Event</h3>
-        <button class="btn btn-primary" onclick="showAlert()">Display Alert</button>
-      </center> 
-    </div>
-   
-<script>
+    <h3>Click Button Event</h3>
+    <button class="btn btn-primary" onclick="showAlert()">Display Alert</button>
+</div>
 
-//Event Function 1
+<script>
+// Event Function 1
 function updateDisplay() {
     var textbox = document.getElementById('textbox');
     var displayText = document.getElementById('displayText');
-    displayText.textContent = textbox.value;
+    displayText.textContent = textbox.value || "Your text will appear here"; // Default text
 }
 
 function showAlert() {
     var textbox = document.getElementById('textbox');
-    alert(" " + textbox.value);
+    alert(textbox.value ? textbox.value : "No input provided."); // Alert with default message
 }
 </script>
-</body>
 
+</body>
 </html>
